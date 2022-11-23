@@ -8,8 +8,13 @@ Do the following:
    2. Return true if age is 18 or higher
 
 */
-
-
+let votingAge = 28;
+if (votingAge == 18 || votingAge > 18) {
+  console.log("true");
+} else {
+  console.log("false");
+}
+//output: true
 
 /*
 Task 2 - Values
@@ -20,8 +25,13 @@ Do the following:
    3. Return the new value of the 1st variable
 
 */
-
-
+let firstVariable = 3;
+let SecondVariable = 3;
+if (SecondVariable < 5) {
+  firstVariable = 0;
+  console.log(firstVariable);
+}
+//output: 0
 
 /*
 Task 3 - Convert Strings to Numbers
@@ -33,8 +43,12 @@ Do the following:
 
    HINT: look up the Number method
 */
-
-
+let stringOne = "1999";
+let numberOne = Number(stringOne);
+console.log(numberOne);
+// output: 1999
+console.log(typeof numberOne);
+//output: number
 /*
 Task 4 - Mood Checker
 
@@ -44,8 +58,14 @@ Do the following:
    3. Else just print 'So moody!'
 
 */
-
-
+let moodChecker = prompt("what is your current mood");
+if (moodChecker == "happy") {
+  console.log("Yay me too!");
+} else if (moodChecker == "sad") {
+  console.log("Aw cheer up");
+} else {
+  console.log("So moody!");
+}
 /*
 
 
@@ -56,10 +76,13 @@ Use conditionals to check if a hardcoded number is odd or even, and then console
 */
 
 var num; // write a number here
-
+num = 1898;
 // write your conditions here
-
-
+if (num % 2 == 0) {
+  console.log(`${num} is even`);
+} else {
+  console.log(`${num} is odd`);
+}
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 FIZZBUZZ 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 /*
@@ -98,10 +121,19 @@ Instead of only printing "fizz", "buzz", and "fizzbuzz", add a fourth print stat
 You should print this whenever you encounter a number that is prime (divisible only by itself and one).
 As you implement this, don't worry about the efficiency of the algorithm you use to check for primes. 
 It's okay for it to be slow.
-
-
 */
-
+let number;
+for (let number = 1; number <= 100; number++) {
+  if (number % 3 == 0) {
+    console.log("Fizz");
+  } else if (number % 5 == 0) {
+    console.log("Buzz");
+  } else if (number % 3 == 0 && number % 5 == 0) {
+    console.log("FizzBuzz");
+  } else {
+    console.log(number);
+  }
+}
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
 
@@ -115,7 +147,15 @@ Using the vowelCounter function below do the following:
   HINT - try looking up the .includes() method
 */
 
-
-function vowelCounter(/*add your code here*/) {
-    /*add your code here*/
+function vowelCounter(s) {
+  /*add your code here*/
+  let vowelCount = 0;
+  let vowels = ["a", "e", "i", "o", "u"];
+  for (let tester of s) {
+    if (vowels.includes(tester)) {
+      vowelCount++;
+    }
+  }
+  console.log(vowelCount);
 }
+vowelCounter("duraan");
