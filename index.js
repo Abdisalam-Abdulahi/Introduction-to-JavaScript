@@ -25,11 +25,11 @@ Do the following:
    3. Return the new value of the 1st variable
 
 */
-let firstVariable = 3;
-let SecondVariable = 3;
-if (SecondVariable < 5) {
-  firstVariable = 0;
-  console.log(firstVariable);
+let morningWeather = "windy";
+let AfternoonWeather = "hot";
+if (AfternoonWeather == "hot") {
+  morningWeather = "cold";
+  console.log(morningWeather);
 }
 //output: 0
 
